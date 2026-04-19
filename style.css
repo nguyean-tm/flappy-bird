@@ -1,0 +1,57 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #1a1a2e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#game-wrapper {
+  position: relative;
+  display: inline-block;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+}
+
+#canvas {
+  display: block;
+  cursor: pointer;
+}
+
+#overlay {
+  display: none;
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  text-align: center;
+  padding: 24px;
+}
+
+#overlay.visible {
+  display: flex;
+}
+
+#overlay h1 {
+  font-size: 2.6rem;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+#overlay p {
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+#best-score-display {
+  font-size: 0.95rem;
+  color: #aaa;
+}
